@@ -1,0 +1,102 @@
+Create a modern, dark-themed, single-page portfolio website using ONLY HTML, CSS, and vanilla JavaScript.
+
+NO frameworks, NO React, NO Tailwind, NO external libraries.
+Use clean, readable, production-quality code.
+Return one complete HTML file with embedded CSS and JavaScript.
+
+GOAL:
+A professional portfolio website for a video editor to showcase Instagram Reels and short-form edits in one place.
+
+SITE STRUCTURE (FOLLOW EXACT ORDER):
+
+1) HERO / INTRODUCTION SECTION
+Layout:
+- Two-column layout (desktop)
+- Left side: text introduction
+- Right side: image placeholder for profile photo
+- Stack vertically on mobile
+
+Content (left side text):
+- Heading:
+  "Welcome to My Portfolio"
+- Subheading:
+  "Hi, I’m Swikar — a Video Editor"
+- Description paragraph:
+  "I help creators and brands turn raw footage into engaging short-form videos that increase watch time, retention, and impact. My focus is clean edits, strong hooks, and storytelling that keeps viewers watching."
+
+CTA:
+- Button: "View My Work"
+- Button scrolls smoothly to the showreel section using JavaScript
+
+Right side:
+- Profile image placeholder (square or rounded rectangle)
+- Use a neutral placeholder image
+- Subtle border or shadow
+
+2) FEATURED SHOWREEL SECTION
+- Section title: "Featured Showreel"
+- Centered large HTML5 video player
+- Controls enabled
+- Poster image placeholder
+- Caption:
+  "A short selection of my best editing work"
+
+3) REELS SHOWCASE SECTION
+- Section title: "Reels & Short-Form Edits"
+- Responsive grid layout
+- Instagram Reel aspect ratio (9:16)
+- Display 10 reel placeholders
+
+Each reel card includes:
+- HTML5 video player (vertical aspect ratio)
+- Poster placeholder
+- Title (e.g., Reel Project 01)
+- Short description (1 line)
+
+Behavior:
+- Only one video plays at a time (pause others with JavaScript)
+- Use lazy loading for videos
+- Videos should not autoplay
+
+4) PROCESS SECTION
+- Simple 3-step horizontal layout
+- Step 1: Strategy
+  "Understanding the audience, platform rules, and hook"
+- Step 2: Editing
+  "Pacing, sound design, transitions, and color"
+- Step 3: Delivery
+  "Platform-optimized exports for Reels, Shorts, and TikTok"
+
+5) ABOUT / TOOLS SECTION
+- Short paragraph:
+  "I focus on intentional edits that remove distractions and highlight the story. My goal is to create videos that feel smooth, engaging, and professional."
+- Tools list:
+  Premiere Pro, After Effects, DaVinci Resolve
+
+6) CONTACT / FOOTER
+- CTA headline:
+  "Let’s Work Together"
+- Email placeholder
+- Optional social links placeholders
+- Small text:
+  "Available for freelance and remote work"
+
+DESIGN REQUIREMENTS:
+- Dark cinematic theme
+- High contrast typography
+- Clean spacing and layout
+- Subtle hover effects (CSS only)
+- Mobile responsive using media queries
+- No testimonials
+- No pricing
+- No blog
+
+TECHNICAL REQUIREMENTS:
+- Use semantic HTML
+- Use CSS variables for colors
+- Smooth scroll using JavaScript
+- Lazy loading for videos
+- Pause other videos when one plays
+
+DELIVERABLE:
+Return a single complete HTML file that works when opened in a browser.
