@@ -136,5 +136,31 @@ export async function registerRoutes(
     }
   });
 
+  // Add seed route for production setup
+  app.get("/api/admin/seed", async (_req, res) => {
+    try {
+      const existing = await storage.getReels();
+      if (existing.length > 0) {
+        return res.json({ message: "Already seeded", count: existing.length });
+      }
+
+      const seedReels = [
+        { title: "Ambiance Edit", description: "Edit for a Premium Restaurant.", videoUrl: "/reels/alcove video.mp4", posterUrl: "https://placehold.co/1080x1920?text=Ambiance", isFeatured: true },
+        { title: "Event Edit", description: "Edit for Ncell Event.", videoUrl: "/reels/reel2.mp4", posterUrl: "https://placehold.co/1080x1920?text=Event", isFeatured: false },
+        { title: "College Edit", description: "One of my college event edit.", videoUrl: "/reels/reel3.mp4", posterUrl: "https://placehold.co/1080x1920?text=College", isFeatured: false },
+        { title: "Social Media", description: "Edit for a short form reel.", videoUrl: "/reels/reel4.mp4", posterUrl: "https://placehold.co/1080x1920?text=Social", isFeatured: false },
+        { title: "Educational", description: "Short & High Retention rate focused edit", videoUrl: "/reels/reel5.mp4", posterUrl: "https://placehold.co/1080x1920?text=Educational", isFeatured: false },
+      ];
+
+      for (const r of seedReels) {
+        await storage.createReel(r);
+      }
+
+      res.json({ message: "Database seeded successfully", count: seedReels.length });
+    } catch (err) {
+      res.status(500).json({ error: err instanceof Error ? err.message : "Unknown error" });
+    }
+  });
+
   return httpServer;
 }
