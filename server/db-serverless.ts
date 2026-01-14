@@ -19,6 +19,13 @@ export function getDb() {
     }
 
     // Create new connection pool
+    try {
+        const url = new URL(process.env.DATABASE_URL);
+        console.log(`[db] Connecting to host: ${url.hostname}`);
+    } catch (e) {
+        console.error(`[db] Invalid DATABASE_URL format`);
+    }
+
     pool = new Pool({
         connectionString: process.env.DATABASE_URL,
         // Serverless-friendly settings
