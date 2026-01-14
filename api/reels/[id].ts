@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { storage } from '../../server/storage-serverless';
+import { storage } from '../../server/storage-serverless.js';
 
 
 export default async function handler(

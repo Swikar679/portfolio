@@ -1,5 +1,5 @@
-import { getDb } from "./db-serverless";
-import { reels, type Reel, type InsertReel } from "@shared/schema";
+import { getDb } from "./db-serverless.js";
+import { reels, type Reel, type InsertReel } from "../shared/schema.js";
 import { eq } from "drizzle-orm";
 
 export interface IStorage {
